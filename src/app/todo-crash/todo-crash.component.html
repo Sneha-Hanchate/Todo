@@ -1,0 +1,41 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+            <div style="margin:4%">
+                <h3 style="color:orange; font-size:4rem;">Add In Todo Component</h3>
+
+                <input type="number" placeholder="Enter Id" [(ngModel)] ="id">
+                <input type="text" placeholder="Enter Title" [(ngModel)] ="title">
+                <input type="text" placeholder="Enter Status" [(ngModel)] ="status">
+
+                <button (click)="add()" style="font-size:1.4rem; background-color:yellow"> ADD </button>
+            <div>
+            <br>
+            <hr>
+
+            <div >
+            <h1 style="color:purple; text-shadow: 2px 1px black;">Todo Component</h1>
+
+            <table style="width:80%">
+
+              <tr style="background-color: grey">
+                <th>Id</th>
+                <th>Title</th>
+                <th>Status</th>
+                <th> Action</th>
+              </tr>
+              <tr *ngFor= "let item of arrTodos">
+                <td>{{item.id}}</td>
+                <td>{{item.title}}</td>
+                <td>{{item.status}}</td>
+                <td><button  style="background-color:blue; padding:2%; margin:3%; color:white;" (click)="delete(item)"> delete </button>
+                <button style="background-color:blue; padding:2%; margin:3%; color:white;" (click)="edit(item)"> edit </button></td>
+            </tr>
+            </table>
+            <br>
+            <button style="background-color:yellow; padding:2%; margin:3%; color:black; font-size:2rem;" (click)="clear()"> Clear </button>
+            </div>
+</div>
+</div>
+</div>

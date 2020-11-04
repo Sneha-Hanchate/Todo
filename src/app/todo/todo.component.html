@@ -1,0 +1,53 @@
+<h1>Tables</h1>
+<div style="margin-left:17%">
+<h2>Todo Component</h2>
+<table style="width:80%">
+
+  <tr style="background-color: green">
+    <th>Id</th>
+    <th>Title</th>
+    <th>Status</th>
+
+  </tr>
+  <tr *ngFor= "let item of arrTodos">
+    <td>{{item.id}}</td>
+    <td>{{item.title}}</td>
+    <td>{{item.status}}</td>
+  </tr>
+</table>
+
+<br>
+<h2>Employee Component</h2>
+<table style="width:80%">
+
+  <tr style="background-color: blue">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Salary</th>
+
+  </tr>
+  <tr *ngFor= "let m of arrEmployee">
+    <td>{{m.id}}</td>
+    <td>{{m.name}}</td>
+    <td>{{m.salary}}</td>
+  </tr>
+</table>
+<br>
+<h2>Product Component</h2>
+<table style="width:80%">
+
+  <tr style="background-color: pink">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Quantity</th>
+    <th>price</th>
+
+  </tr>
+  <tr *ngFor= "let i of arrProduct">
+    <td>{{i.id}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.quantity}}</td>
+     <td>{{i.price}}</td>
+  </tr>
+</table>
+</div>
